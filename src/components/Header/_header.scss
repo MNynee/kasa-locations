@@ -1,0 +1,23 @@
+.header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+        display: block;
+    }
+
+    .header__nav {
+        display: flex;
+        align-items: center;
+        gap: 57px;
+
+        .nav__link {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+}
+

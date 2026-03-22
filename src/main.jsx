@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import AccomodationDetail from './pages/AccomodationDetail'
 import Error from './pages/Error'
-import './index.css'
+import './main.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
