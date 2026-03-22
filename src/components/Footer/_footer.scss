@@ -1,0 +1,16 @@
+@use '../../styles/variables';
+
+.footer__container {
+    margin: 66px 0 29px;
+    text-align: center;
+
+    .footer__logo {
+        margin-bottom: 32px;
+    }
+
+    .footer__text {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: variables.$footer-text-color;
+    }
+}
