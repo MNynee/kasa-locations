@@ -1,3 +1,5 @@
+@use '../../styles/variables';
+
 .header__container {
     max-width: 100%;
     margin: 45px 100px 0;
@@ -30,10 +32,15 @@
             text-decoration: none;
             font-size: 1.5rem;
             font-weight: 500;
+            color: variables.$text-color;
 
             @media screen and (max-width: 376px) {
                 font-size: .75rem;
             }
+        }
+
+        .nav__link.active {
+            text-decoration: underline;
         }
     }
 }

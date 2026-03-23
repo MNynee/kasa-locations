@@ -78,11 +78,15 @@ footer {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 500;
+  color: #000000;
 }
 @media screen and (max-width: 376px) {
   .header__container .header__nav .nav__link {
     font-size: 0.75rem;
   }
+}
+.header__container .header__nav .nav__link.active {
+  text-decoration: underline;
 }
 
 .footer__container {
