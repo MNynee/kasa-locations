@@ -124,12 +124,23 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  background-image: url("../../assets/banner-homepage.png");
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.banner.homepage {
+  background: url("../../src/assets/banner-homepage.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6039215686);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.banner.about {
+  background: url("../../src/assets/banner-about.png");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media screen and (max-width: 376px) {
   .banner {
@@ -146,23 +157,33 @@ footer {
 @media screen and (max-width: 376px) {
   .banner .banner__text {
     font-size: 1.5rem;
+    width: 225px;
   }
 }
 
-.accomodations__card {
+.accomodations a {
+  display: block;
   height: 340px;
-  width: 340px;
   border-radius: 10px;
-  position: relative;
 }
 @media screen and (max-width: 376px) {
-  .accomodations__card {
+  .accomodations a {
     width: 335px;
     height: 255px;
   }
 }
+
+.accomodations__card {
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+}
 .accomodations__card .card__cover {
   display: block;
+  width: 100%;
+  max-height: 340px;
+  height: 100%;
+  border-radius: 10px;
 }
 .accomodations__card .card__title {
   position: absolute;
@@ -171,6 +192,30 @@ footer {
   font-size: 1.125rem;
   font-weight: 700;
   color: #FFFFFF;
+}
+@media screen and (max-width: 376px) {
+  .accomodations__card .card__title {
+    bottom: 15px;
+  }
+}
+
+.accomodations {
+  margin: 43px auto 50px;
+  padding: 56px 50px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 60px;
+  background-color: #F6F6F6;
+}
+@media screen and (max-width: 376px) {
+  .accomodations {
+    margin: 22px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

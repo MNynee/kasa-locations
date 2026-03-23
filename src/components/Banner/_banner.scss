@@ -6,13 +6,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    background-image: url('../../assets/banner-homepage.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #0000009a;
+    border-radius: 25px;    
     box-shadow: variables.$shadow-banner-homepage;
+
+    &.homepage {
+        background: url('../../src/assets/banner-homepage.png');
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: darken;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.about {
+        background: url('../../src/assets/banner-about.png');
+        background-color: rgba(0, 0, 0, 0.3);
+        background-blend-mode: darken;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     @media screen and (max-width: 376px) {
         height: 111px;
@@ -27,6 +40,7 @@
     
         @media screen and (max-width: 376px) {
             font-size: 1.5rem;
+            width: 225px;
         }
     }
 }
