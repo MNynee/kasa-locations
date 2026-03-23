@@ -17,18 +17,12 @@ html {
 
 header {
   max-width: 100vw;
-  margin: 45px 100px 0;
-}
-@media screen and (max-width: 375px) {
-  header {
-    margin: 20px 20px 0;
-  }
 }
 
 main {
   margin: 50px 100px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   main {
     margin: 27px 20px;
   }
@@ -51,36 +45,72 @@ footer {
 }
 
 .header__container {
-  width: 100%;
+  max-width: 100%;
+  margin: 45px 100px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 376px) {
+  .header__container {
+    margin: 20px 20px 0;
+  }
+}
 .header__container .header__logo {
   display: block;
+}
+@media screen and (max-width: 376px) {
+  .header__container .header__logo {
+    max-width: 145px;
+  }
 }
 .header__container .header__nav {
   display: flex;
   align-items: center;
   gap: 57px;
 }
+@media screen and (max-width: 376px) {
+  .header__container .header__nav {
+    gap: 26px;
+  }
+}
 .header__container .header__nav .nav__link {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 500;
 }
+@media screen and (max-width: 376px) {
+  .header__container .header__nav .nav__link {
+    font-size: 0.75rem;
+  }
+}
 
 .footer__container {
-  margin: 66px 0 29px;
+  margin: 66px auto 29px;
   text-align: center;
+}
+@media screen and (max-width: 376px) {
+  .footer__container {
+    width: 122px;
+  }
 }
 .footer__container .footer__logo {
   margin-bottom: 32px;
+}
+@media screen and (max-width: 376px) {
+  .footer__container .footer__logo {
+    margin-bottom: 10px;
+  }
 }
 .footer__container .footer__text {
   font-size: 1.5rem;
   font-weight: 500;
   color: #FFFFFF;
+}
+@media screen and (max-width: 376px) {
+  .footer__container .footer__text {
+    font-size: 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

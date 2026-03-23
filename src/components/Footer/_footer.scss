@@ -1,16 +1,28 @@
 @use '../../styles/variables';
 
 .footer__container {
-    margin: 66px 0 29px;
+    margin: 66px auto 29px;
     text-align: center;
+
+    @media screen and (max-width: 376px) {
+        width: 122px;
+    }
 
     .footer__logo {
         margin-bottom: 32px;
+
+        @media screen and (max-width: 376px) {
+            margin-bottom: 10px;
+        }
     }
 
     .footer__text {
         font-size: 1.5rem;
         font-weight: 500;
         color: variables.$footer-text-color;
+
+        @media screen and (max-width: 376px) {
+                font-size: .75rem;
+            }
     }
 }
