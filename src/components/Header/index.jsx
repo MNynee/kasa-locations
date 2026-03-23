@@ -8,8 +8,8 @@ function Header() {
             <div className="header__container">
                 <img src={logo} alt="Kasa logo" className="header__logo" />
                 <nav className="header__nav">
-                    <NavLink to="/" end="" className="nav__link">Accueil</NavLink>
-                    <NavLink to="/about" className="nav__link">À Propos</NavLink>
+                    <NavLink to="/" end="" className="nav__link home">Accueil</NavLink>
+                    <NavLink to="/about" className="nav__link about">À Propos</NavLink>
                 </nav>
             </div>
         </header>

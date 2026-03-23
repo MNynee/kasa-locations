@@ -1,0 +1,26 @@
+@use '../../styles/variables';
+
+.accomodations__card {
+    height: 340px;
+    width: 340px;
+    border-radius: 10px;
+    position: relative;
+
+    @media screen and (max-width: 376px) {
+        width: 335px;
+        height: 255px;
+    }
+
+    .card__cover {
+        display: block;
+    }
+
+    .card__title {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: variables.$footer-text-color;
+    }
+}
