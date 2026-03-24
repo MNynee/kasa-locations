@@ -1,0 +1,40 @@
+@use '../../styles/variables';
+
+.accomodations a {
+    display: block;
+    height: 340px;
+    border-radius: 10px;
+    
+    @media screen and (max-width: 376px) {
+        width: 335px;
+        height: 255px;
+    }
+}
+.accomodations__card {
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+
+
+    .card__cover {
+        display: block;
+        width: 100%;
+        max-height: 340px;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .card__title {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: variables.$footer-text-color;
+
+        @media screen and (max-width: 376px) {
+            bottom: 15px;
+        }
+    }
+}

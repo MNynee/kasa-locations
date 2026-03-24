@@ -1,0 +1,19 @@
+@use '../../styles/variables';
+
+.accomodations {
+    margin: 43px auto 50px;
+    padding: 56px 50px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 60px;
+    background-color: variables.$secondary-bg;
+
+    @media screen and (max-width: 376px) {
+        margin: 22px 0 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
