@@ -2,12 +2,13 @@
 
 .accomodations a {
     display: block;
-    height: 340px;
+    width: 335px;
+    height: 255px;
     border-radius: 10px;
     
-    @media screen and (max-width: 376px) {
-        width: 335px;
-        height: 255px;
+    @media screen and (min-width:1439px) {
+        height: 340px;
+        width: 340px;
     }
 }
 .accomodations__card {
@@ -28,13 +29,13 @@
     .card__title {
         position: absolute;
         left: 20px;
-        bottom: 20px;
+        bottom: 15px;
         font-size: 1.125rem;
         font-weight: 700;
         color: variables.$footer-text-color;
 
-        @media screen and (max-width: 376px) {
-            bottom: 15px;
+        @media screen and (min-width:1439px) {
+            bottom: 20px;
         }
     }
 }

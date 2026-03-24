@@ -3,26 +3,27 @@
 .footer__container {
     margin: 66px auto 29px;
     text-align: center;
+    width: 122px;
 
-    @media screen and (max-width: 376px) {
-        width: 122px;
+    @media screen and (min-width:1439px) {
+        width: 100%;
     }
 
     .footer__logo {
-        margin-bottom: 32px;
+        margin-bottom: 10px;
 
-        @media screen and (max-width: 376px) {
-            margin-bottom: 10px;
+        @media screen and (min-width:1439px) {
+            margin-bottom: 32px;
         }
     }
 
     .footer__text {
-        font-size: 1.5rem;
+        font-size: .75rem;
         font-weight: 500;
         color: variables.$footer-text-color;
 
-        @media screen and (max-width: 376px) {
-                font-size: .75rem;
-            }
+        @media screen and (min-width:1439px) {
+            font-size: 1.5rem;
+        }
     }
 }
