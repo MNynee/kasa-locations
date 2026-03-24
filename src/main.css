@@ -141,12 +141,14 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: none;
 }
 @media screen and (max-width: 376px) {
   .banner {
     height: 111px;
     justify-content: flex-start;
     padding: 16px 32px;
+    border-radius: 10px;
   }
 }
 .banner .banner__text {
@@ -197,6 +199,62 @@ footer {
 @media screen and (max-width: 376px) {
   .accomodations__card .card__title {
     bottom: 15px;
+  }
+}
+
+.collapse {
+  width: 100%;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1439px) {
+  .collapse {
+    max-width: 1023px;
+    margin: 30px auto 0;
+  }
+}
+.collapse .collapse__title {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6060;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1439px) {
+  .collapse .collapse__title {
+    padding: 15px;
+  }
+}
+.collapse .collapse__title h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1439px) {
+  .collapse .collapse__title h2 {
+    font-size: 1.5rem;
+  }
+}
+.collapse .collapse__title .collapse__btn {
+  width: 16px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1439px) {
+  .collapse .collapse__title .collapse__btn {
+    width: 24px;
+  }
+}
+.collapse .collapse__text {
+  background-color: #F6F6F6;
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  font-size: 13px;
+  color: #000000;
+}
+@media screen and (min-width: 1439px) {
+  .collapse .collapse__text {
+    font-size: 1.25rem;
   }
 }
 
