@@ -1,3 +1,9 @@
-function AcommodationDetail() {}
+import React from 'react'
 
-export default AcommodationDetail
+const AccomodationDetail = () => {
+  return (
+    <div>AccomodationDetail</div>
+  )
+}
+
+export default AccomodationDetail

@@ -1,14 +1,24 @@
-import { accomodationsData } from '../../data/logements'
+import React from 'react'
+import { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
 import AccomodationCard from '../../components/Card'
 import '../../main.css'
 
-function Home() {
-     const recentAccomodations = accomodationsData.slice(0, 6)
-    
+const Home = () => {
+  const [recentAccomodations, setRecentAccomodations] = useState([])
+
+    useEffect(() => {
+        async function fetchAccomodations() {
+            const response = await fetch('http://localhost:5173/src/data/logements.json')
+            const data = await response.json()
+            setRecentAccomodations(data.slice(0, 6))
+        }
+        fetchAccomodations()
+    }, [])
+        
          return (
             <div className="page">
-                <Banner />
+                <Banner isHome />
                 <section className="accomodations">
                     {recentAccomodations.map((accomodation) => (
                         <AccomodationCard key={accomodation.id} accomodation={accomodation} />
