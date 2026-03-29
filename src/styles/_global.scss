@@ -11,6 +11,10 @@ header {
 main {
     margin: 27px 20px;
 
+    @media screen and (min-width:1023px) {
+        margin: 50px 50px;
+    }
+
     @media screen and (min-width:1439px) {
         margin: 50px 100px;
     }

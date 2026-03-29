@@ -7,6 +7,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (min-width: 1023px) {
+        margin: 45px 50px 0;
+    }
+    
     @media screen and (min-width: 1439px) {
         margin: 45px 100px 0;
     }
@@ -16,7 +20,7 @@
         max-width: 145px;
 
         @media screen and (min-width: 1439px) {
-            width: 211px;
+            max-width: 211px;
         }
     }
 
@@ -37,6 +41,7 @@
             color: variables.$text-color;
 
             @media screen and (min-width: 1439px) {
+                text-transform: none;
                 font-size: 1.5rem;
             }
         }

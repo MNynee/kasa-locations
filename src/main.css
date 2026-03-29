@@ -22,6 +22,11 @@ header {
 main {
   margin: 27px 20px;
 }
+@media screen and (min-width: 1023px) {
+  main {
+    margin: 50px 50px;
+  }
+}
 @media screen and (min-width: 1439px) {
   main {
     margin: 50px 100px;
@@ -115,6 +120,11 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 1023px) {
+  .header__container {
+    margin: 45px 50px 0;
+  }
+}
 @media screen and (min-width: 1439px) {
   .header__container {
     margin: 45px 100px 0;
@@ -126,7 +136,7 @@ footer {
 }
 @media screen and (min-width: 1439px) {
   .header__container .header__logo {
-    width: 211px;
+    max-width: 211px;
   }
 }
 .header__container .header__nav {
@@ -148,6 +158,7 @@ footer {
 }
 @media screen and (min-width: 1439px) {
   .header__container .header__nav .nav__link {
+    text-transform: none;
     font-size: 1.5rem;
   }
 }
