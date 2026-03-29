@@ -380,4 +380,49 @@ footer {
   }
 }
 
+.error {
+  margin: 113px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 113px;
+  text-align: center;
+}
+.error .error__title,
+.error .error__message {
+  color: #FF6060;
+}
+.error .error__message,
+.error .error__link {
+  font-weight: 500;
+}
+.error .error__title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1023px) {
+  .error .error__title {
+    font-size: 18rem;
+  }
+}
+.error .error__message {
+  font-size: 1.125rem;
+  width: 69%;
+}
+@media screen and (min-width: 1023px) {
+  .error .error__message {
+    font-size: 2.25rem;
+  }
+}
+.error .error__link {
+  font-size: 0.875rem;
+  color: #000000;
+}
+@media screen and (min-width: 1023px) {
+  .error .error__link {
+    font-size: 1.125rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
