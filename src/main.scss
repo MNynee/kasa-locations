@@ -1,11 +1,14 @@
 @use './styles/variables';
 @use './styles/reset';
 @use './styles/global';
+@use './styles/animations';
 
 @use './components/Layout/layout';
 @use './components/Header/header';
 @use './components/Footer/footer';
 @use './components/Banner/banner';
 @use './components/Card/card';
+@use './components/Collapse/collapse';
 
 @use './pages/Home/home';
+@use './pages/About/about';

@@ -2,40 +2,42 @@
 
 .header__container {
     max-width: 100%;
-    margin: 45px 100px 0;
+    margin: 20px 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: 376px) {
-        margin: 20px 20px 0;
+    @media screen and (min-width: 1439px) {
+        margin: 45px 100px 0;
     }
 
     .header__logo {
         display: block;
+        max-width: 145px;
 
-        @media screen and (max-width: 376px) {
-            max-width: 145px;
+        @media screen and (min-width: 1439px) {
+            width: 211px;
         }
     }
 
     .header__nav {
         display: flex;
         align-items: center;
-        gap: 57px;
+        gap: 26px;
 
-        @media screen and (max-width: 376px) {
-            gap: 26px;
+        @media screen and (min-width: 1439px) {
+            gap: 57px;
         }
 
         .nav__link {
             text-decoration: none;
-            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-size: .75rem;
             font-weight: 500;
             color: variables.$text-color;
 
-            @media screen and (max-width: 376px) {
-                font-size: .75rem;
+            @media screen and (min-width: 1439px) {
+                font-size: 1.5rem;
             }
         }
 

@@ -1,0 +1,84 @@
+@use '../../styles/variables';
+
+.collapse {
+    width: 100%;
+    margin-top: 20px;
+
+    @media screen and (min-width:1439px) {
+        max-width: 1023px;
+        margin: 30px auto 0;
+    }
+
+    .collapse__title {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: variables.$main-color;
+        border-radius: 5px;
+
+        @media screen and (min-width:1439px) {
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 13px;
+            font-weight: 700;
+            color: variables.$footer-text-color;
+
+            @media screen and (min-width:1439px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .collapse__btn {
+            width: 16px;
+            cursor: pointer;
+            transform: rotate(180deg);
+
+            &.open {
+                animation: open .5s ease-in-out 1 forwards;
+            }
+            
+            &.close {
+                animation: close .5s ease-in-out 1 forwards;
+            }
+
+            @media screen and (min-width:1439px) {
+                width: 24px;
+            }
+        }
+    }
+
+    .collapse__text {
+        background-color: variables.$secondary-bg;
+        border-radius: 0 0 5px 5px;
+        padding: 0 20px;
+        font-size: 13px;
+        color: variables.$text-color;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease, padding 0.5s ease;
+
+        &.open {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        &.close {
+            max-height: 0;
+            padding: 0 20px;
+        }
+
+        &.open p {
+            animation: slideDown .4s ease 1 forwards;
+        }
+
+        
+
+        @media screen and (min-width:1439px) {
+            font-size: 1.25rem;
+        }
+    }
+}
