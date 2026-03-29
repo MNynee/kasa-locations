@@ -35,6 +35,15 @@
         .collapse__btn {
             width: 16px;
             cursor: pointer;
+            transform: rotate(180deg);
+
+            &.open {
+                animation: open .5s ease-in-out 1 forwards;
+            }
+            
+            &.close {
+                animation: close .5s ease-in-out 1 forwards;
+            }
 
             @media screen and (min-width:1439px) {
                 width: 24px;
@@ -45,9 +54,28 @@
     .collapse__text {
         background-color: variables.$secondary-bg;
         border-radius: 0 0 5px 5px;
-        padding: 20px;
+        padding: 0 20px;
         font-size: 13px;
         color: variables.$text-color;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease, padding 0.5s ease;
+
+        &.open {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        &.close {
+            max-height: 0;
+            padding: 0 20px;
+        }
+
+        &.open p {
+            animation: slideDown .4s ease 1 forwards;
+        }
+
+        
 
         @media screen and (min-width:1439px) {
             font-size: 1.25rem;

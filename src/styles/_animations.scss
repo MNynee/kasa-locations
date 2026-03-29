@@ -1,0 +1,45 @@
+@use './variables';
+
+// Animation for spinning the button
+
+@-webkit-keyframes close {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(180deg); }
+}
+
+@keyframes close {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+@-webkit-keyframes open {
+    0% { -webkit-transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+
+@keyframes open {
+    0% { transform: rotate(180deg); }
+  100% { transform: rotate(0deg); }
+}
+
+// Animation for showing/hiding text
+
+@keyframes slideDown {
+    from { transform: translateY(-120px) }
+    to { transform: translateY(0px); }
+}
+
+@-webkit-keyframes slideDown {
+    from { transform: translateY(-60px) }
+    to { transform: translateY(60px); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(0px) }
+    to { transform: translateY(-120px); }
+}
+
+@-webkit-keyframes slideUp {
+    from { transform: translateY(0px) }
+    to { transform: translateY(-120px); }
+}

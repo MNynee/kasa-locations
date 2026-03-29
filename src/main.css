@@ -34,6 +34,70 @@ footer {
   background-color: #000000;
 }
 
+@-webkit-keyframes close {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@keyframes close {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes open {
+  0% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@keyframes open {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-120px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(60px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-120px);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-120px);
+  }
+}
 .layout {
   min-height: 100vh;
   width: 100%;
@@ -245,6 +309,13 @@ footer {
 .collapse .collapse__title .collapse__btn {
   width: 16px;
   cursor: pointer;
+  transform: rotate(180deg);
+}
+.collapse .collapse__title .collapse__btn.open {
+  animation: open 0.5s ease-in-out 1 forwards;
+}
+.collapse .collapse__title .collapse__btn.close {
+  animation: close 0.5s ease-in-out 1 forwards;
 }
 @media screen and (min-width: 1439px) {
   .collapse .collapse__title .collapse__btn {
@@ -254,9 +325,23 @@ footer {
 .collapse .collapse__text {
   background-color: #F6F6F6;
   border-radius: 0 0 5px 5px;
-  padding: 20px;
+  padding: 0 20px;
   font-size: 13px;
   color: #000000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.5s ease;
+}
+.collapse .collapse__text.open {
+  max-height: 500px;
+  padding: 20px;
+}
+.collapse .collapse__text.close {
+  max-height: 0;
+  padding: 0 20px;
+}
+.collapse .collapse__text.open p {
+  animation: slideDown 0.4s ease 1 forwards;
 }
 @media screen and (min-width: 1439px) {
   .collapse .collapse__text {
