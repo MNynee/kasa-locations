@@ -38,29 +38,12 @@ footer {
   height: 209px;
   background-color: #000000;
 }
-
-@-webkit-keyframes close {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(180deg);
-  }
-}
 @keyframes close {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(180deg);
-  }
-}
-@-webkit-keyframes open {
-  0% {
-    -webkit-transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
   }
 }
 @keyframes open {
@@ -79,23 +62,7 @@ footer {
     transform: translateY(0px);
   }
 }
-@-webkit-keyframes slideDown {
-  from {
-    transform: translateY(-60px);
-  }
-  to {
-    transform: translateY(60px);
-  }
-}
 @keyframes slideUp {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-120px);
-  }
-}
-@-webkit-keyframes slideUp {
   from {
     transform: translateY(0px);
   }
@@ -267,7 +234,8 @@ footer {
   max-height: 340px;
   height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .accomodations__card .card__title {
   position: absolute;
@@ -423,6 +391,4 @@ footer {
   .error .error__link {
     font-size: 1.125rem;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
