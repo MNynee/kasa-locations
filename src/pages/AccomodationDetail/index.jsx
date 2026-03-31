@@ -16,7 +16,9 @@ const AccomodationDetail = () => {
       }, [])
 
   return (
-    <div>AccomodationDetail</div>
+    <div className='page'>
+      
+    </div>
   )
 }
 
