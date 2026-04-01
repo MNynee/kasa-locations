@@ -1,13 +1,14 @@
 import React from "react";
+import '../../main.css';
 
 const Carousel = ({ accomodation }) => {
   return (
     <section className="carousel">
       {accomodation.pictures.map((picture, index) => (
-        <img src={`${picture}[${index}]`} alt={`Picture ${index + 1}`} className="carousel__img" />
+        <img key={`${accomodation.id}-${index}`} src={picture} alt={`Picture ${index + 1}`} className="carousel__img" />
       ))}
-      <img src="../../assets/arrow-left.svg" alt="" className="carousel__arrow left" />
-      <img src="../../assets/arrow-right.svg" alt="" className="carousel__arrow right" />
+      <img src="../../src/assets/arrow-left.svg" alt="Previous photo" className="carousel__arrow left" />
+      <img src="../../src/assets/arrow-right.svg" alt="Next photo" className="carousel__arrow right" />
     </section>
   );
 };

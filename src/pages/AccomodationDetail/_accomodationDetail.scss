@@ -1,0 +1,18 @@
+@use '../../styles/variables';
+
+
+.accomodation__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.accomodation__star {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.accomodation__star--active {
+  color: variables.$main-color;
+}
+.accomodation__star--inactive {
+  color: variables.$secondary-bg;
+}

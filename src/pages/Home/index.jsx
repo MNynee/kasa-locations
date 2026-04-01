@@ -9,7 +9,7 @@ const Home = () => {
 
     useEffect(() => {
         async function fetchAccomodations() {
-            const response = await fetch('http://localhost:5173/src/data/logements.json')
+            const response = await fetch('http://localhost:5173/data/logements.json')
             const data = await response.json()
             setRecentAccomodations(data.slice(0, 6))
         }
