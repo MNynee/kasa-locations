@@ -64,7 +64,11 @@ const AccomodationDetail = () => {
         </div>
         <div className="accomodation__collapses">
           <Collapse title="Description" description={accomodation.description} />
-          <Collapse title="Équipements" description={accomodation.equipments.join(', ')} />
+          <Collapse title="Équipements" description={accomodation.equipments.map((item, index) => (
+            <span key={index}>
+              {index === accomodation.equipments.length - 1 ? item : <>{item}<br /></>}
+            </span>
+          ))} />
         </div>
       </section>
     </div>
