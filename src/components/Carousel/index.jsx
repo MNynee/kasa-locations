@@ -8,7 +8,7 @@ const Carousel = ({ accomodation }) => {
   useEffect(() => {
     if (carouselRef.current && accomodation?.pictures) {
       const offset = (currentIndex % accomodation.pictures.length) * 106;
-      carouselRef.current.style.transform = currentIndex === 0 ? `translateX(0%)` : `translateX(-${offset}%)`;
+      carouselRef.current.style.transform = `translateX(-${offset}%)`;
     }
   }, [currentIndex, accomodation]);
 

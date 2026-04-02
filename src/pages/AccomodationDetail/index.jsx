@@ -36,30 +36,26 @@ const AccomodationDetail = () => {
     <div className='page'>
       <Carousel accomodation={accomodation} />
       <section className="accomodation">
-        <div className='accomodation__details'>
-          <h1 className="accomodation__title">{accomodation.title}</h1>
-          <p className="accomodation__location">{accomodation.location}</p>
-          <div className='accomodation__tags'>
-            {(accomodation.tags || []).map((tag, index) => (
-              <span key={`tag-${index}`} className="accomodation__tag">{tag}</span>
-            ))}
+        <div className="accomodation__data-container">
+          <div className='accomodation__details'>
+            <h1 className="accomodation__title">{accomodation.title}</h1>
+            <p className="accomodation__location">{accomodation.location}</p>
+            <ul className='accomodation__tags'>
+              {(accomodation.tags || []).map((tag, index) => (
+                <li key={`tag-${index}`} className="accomodation__tag">{tag}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-        <div className="accomodation__rating-host">
-          <div className="accomodation__rating">
-            {stars.map((star) => (
-              <span
-                key={star}
-                className={`accomodation__star ${star <= ratingValue ? 'accomodation__star--active' : 'accomodation__star--inactive'}`}
-                aria-label={star <= ratingValue ? 'Filled star' : 'Empty star'}
-              >
-                ★
-              </span>
-            ))}
-          </div>
-          <div className="accomodation__host">
-            <p className="accomodation__host-name">{accomodation.host?.name}</p>
-            <img src={accomodation.host?.picture} alt={`${accomodation.host?.name || 'Host'} picture`} className="accomodation__host-pic" />
+          <div className="accomodation__rating-host">
+            <div className="accomodation__rating">
+              {stars.map((star) => (
+                star <= ratingValue ? (<img src='../../src/assets/full-star.svg' alt='filled star' className='accomodation__star active'/>) : (<img src='../../src/assets/empty-star.svg' alt='empty star' className='accomodation__star inactive'/>)
+              ))}
+            </div>
+            <div className="accomodation__host">
+              <p className="accomodation__host-name">{accomodation.host?.name}</p>
+              <img src={accomodation.host?.picture} alt={`${accomodation.host?.name || 'Host'} picture`} className="accomodation__host-pic" />
+            </div>
           </div>
         </div>
         <div className="accomodation__collapses">

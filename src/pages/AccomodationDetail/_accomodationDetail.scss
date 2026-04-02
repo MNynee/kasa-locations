@@ -1,18 +1,147 @@
 @use '../../styles/variables';
 
+.accomodation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    
+    .accomodation__data-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        
+        @media screen and (min-width: 1023px) {
+            flex-direction: row;    
+            justify-content: space-between;        
+        }
 
-.accomodation__rating {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.accomodation__star {
-  font-size: 1.25rem;
-  line-height: 1;
-}
-.accomodation__star--active {
-  color: variables.$main-color;
-}
-.accomodation__star--inactive {
-  color: variables.$secondary-bg;
+        .accomodation__details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+    
+            @media screen and (min-width: 1023px) {
+                gap: 0;
+            }
+    
+            .accomodation__title {
+                font-size: 1.125rem;
+                font-weight: 500;
+                color: variables.$main-color;
+    
+                @media screen and (min-width: 1023px) {
+                    font-size: 2.25rem;
+                }
+            }
+    
+            .accomodation__location {
+                font-size: .875rem;
+                font-weight: 500;
+                color: variables.$text-color;
+    
+                @media screen and (min-width: 1023px) {
+                    font-size: 1.125rem;
+                }
+            }
+    
+            .accomodation__tags {
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+    
+                .accomodation__tag {
+                    width: 84px;
+                    height: 18px;
+                    background-color: variables.$main-color;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .625rem;
+                    font-weight: 700;
+                    color: variables.$footer-text-color;
+    
+                    @media screen and (min-width: 1023px) {
+                        width: 115px;
+                        height: 25px;
+                        font-size: .875rem;
+                    }
+                }
+            }
+        }
+    
+        .accomodation__rating-host {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            @media screen and (min-width: 1023px) {
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 25px;
+            }
+    
+            .accomodation__rating {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+    
+                @media screen and (min-width: 1023px) {
+                    gap: 15px;
+                }
+    
+                .accomodation__star {
+                    @media screen and (min-width: 1023px) {
+                        width: 24px;
+                    }
+                }
+            }
+    
+            .accomodation__host {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+    
+                .accomodation__host-name {
+                    text-align: right;
+                    font-size: .75rem;
+                    font-weight: 500;
+                    width: 60px;
+                    color: variables.$main-color;
+    
+                    @media screen and (min-width: 1023px) {
+                        font-size: 1.125rem;
+                        width: 93px;
+                    }
+                }
+    
+                .accomodation__host-pic {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+    
+                    @media screen and (min-width: 1023px) {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .accomodation__collapses {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (min-width: 1023px) {
+            flex-direction: row;
+            gap: 76px;
+        }
+    }
 }
