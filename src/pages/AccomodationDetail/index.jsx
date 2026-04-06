@@ -1,9 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Carousel from '../../components/Carousel'
-import Error from '../Error'
 import '../../main.css'
 
 const AccomodationDetail = () => {
@@ -24,9 +23,20 @@ const AccomodationDetail = () => {
   }
 
   const accomodation = getAccomodationById(id)
+  const navigate = useNavigate()
 
   if (!accomodation) {
-    return <Error />
+    return (
+      <div className="page">
+        <button onClick={() => navigate(-1)} className="back-button">
+        ← Retourner
+        </button>
+        <section className="accomodation-not-found error">
+          <h1 className='accomodation error__title'>Logement non trouvé.</h1>
+          <p className='error__message'>Le logement demandé n'existe pas.</p>
+        </section>
+      </div>
+    )
   }
 
   const ratingValue = Number(accomodation.rating) || 0

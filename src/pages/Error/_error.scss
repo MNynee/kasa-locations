@@ -23,6 +23,10 @@
         font-size: 6rem;
         font-weight: 700;
 
+        &.accomodation {
+            font-size: 4rem;
+        }
+
         @media screen and (min-width: 1023px) {
             font-size: 18rem;
         }
@@ -45,4 +49,15 @@
             font-size: 1.125rem;
         }
     }
+}
+
+.back-button {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid variables.$main-color;
+    border-radius: 10px;
+    color: variables.$main-color;
+    font-family: variables.$main-font;
+    font-size: 1.125rem;
+    cursor: pointer;
 }

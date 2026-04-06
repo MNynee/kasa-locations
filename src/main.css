@@ -588,6 +588,9 @@ footer {
   font-size: 6rem;
   font-weight: 700;
 }
+.error .error__title.accomodation {
+  font-size: 4rem;
+}
 @media screen and (min-width: 1023px) {
   .error .error__title {
     font-size: 18rem;
@@ -610,4 +613,15 @@ footer {
   .error .error__link {
     font-size: 1.125rem;
   }
+}
+
+.back-button {
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #FF6060;
+  border-radius: 10px;
+  color: #FF6060;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
