@@ -316,7 +316,7 @@ footer {
 }
 @media screen and (min-width: 1023px) {
   .collapse .collapse__text.open {
-    min-height: 160px;
+    min-height: 68px;
   }
 }
 .collapse .collapse__text.close {
