@@ -38,29 +38,12 @@ footer {
   height: 209px;
   background-color: #000000;
 }
-
-@-webkit-keyframes close {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(180deg);
-  }
-}
 @keyframes close {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(180deg);
-  }
-}
-@-webkit-keyframes open {
-  0% {
-    -webkit-transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
   }
 }
 @keyframes open {
@@ -79,23 +62,7 @@ footer {
     transform: translateY(0px);
   }
 }
-@-webkit-keyframes slideDown {
-  from {
-    transform: translateY(-60px);
-  }
-  to {
-    transform: translateY(60px);
-  }
-}
 @keyframes slideUp {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-120px);
-  }
-}
-@-webkit-keyframes slideUp {
   from {
     transform: translateY(0px);
   }
@@ -267,7 +234,8 @@ footer {
   max-height: 340px;
   height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .accomodations__card .card__title {
   position: absolute;
@@ -285,7 +253,6 @@ footer {
 
 .collapse {
   width: 100%;
-  margin-top: 20px;
 }
 @media screen and (min-width: 1439px) {
   .collapse {
@@ -347,6 +314,11 @@ footer {
   max-height: 500px;
   padding: 20px;
 }
+@media screen and (min-width: 1023px) {
+  .collapse .collapse__text.open {
+    min-height: 160px;
+  }
+}
 .collapse .collapse__text.close {
   max-height: 0;
   padding: 0 20px;
@@ -357,6 +329,71 @@ footer {
 @media screen and (min-width: 1439px) {
   .collapse .collapse__text {
     font-size: 1.25rem;
+  }
+}
+
+.carousel {
+  min-width: 100%;
+  height: 255px;
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+@media screen and (min-width: 767px) {
+  .carousel {
+    min-height: 415px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carousel {
+    border-radius: 25px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .carousel {
+    height: 500px;
+    border-radius: 30px;
+  }
+}
+.carousel .carousel__container {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  transition: all 0.3s ease;
+}
+.carousel .carousel__container .carousel__img {
+  min-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel .carousel__arrow {
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media screen and (min-width: 1023px) {
+  .carousel .carousel__arrow {
+    width: 47px;
+  }
+}
+.carousel .carousel__arrow.left {
+  left: 6px;
+}
+@media screen and (min-width: 1023px) {
+  .carousel .carousel__arrow.left {
+    left: 24px;
+  }
+}
+.carousel .carousel__arrow.right {
+  right: 6px;
+}
+@media screen and (min-width: 1023px) {
+  .carousel .carousel__arrow.right {
+    right: 24px;
   }
 }
 
@@ -377,6 +414,156 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px 60px;
     background-color: #F6F6F6;
+  }
+}
+
+.collapse-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accomodation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.accomodation .accomodation__data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__details {
+    gap: 0;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__details .accomodation__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #FF6060;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__details .accomodation__title {
+    font-size: 2.25rem;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__details .accomodation__location {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__details .accomodation__location {
+    font-size: 1.125rem;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__details .accomodation__tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.accomodation .accomodation__data-container .accomodation__details .accomodation__tags .accomodation__tag {
+  min-width: 84px;
+  padding: 0 5px;
+  height: 18px;
+  background-color: #FF6060;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__details .accomodation__tags .accomodation__tag {
+    min-width: 115px;
+    height: 25px;
+    font-size: 0.875rem;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__rating-host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__rating-host {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 25px;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__rating-host .accomodation__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__rating-host .accomodation__rating {
+    gap: 15px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__rating-host .accomodation__rating .accomodation__star {
+    width: 24px;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__rating-host .accomodation__host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.accomodation .accomodation__data-container .accomodation__rating-host .accomodation__host .accomodation__host-name {
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 500;
+  width: 60px;
+  color: #FF6060;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__rating-host .accomodation__host .accomodation__host-name {
+    font-size: 1.125rem;
+    width: 93px;
+  }
+}
+.accomodation .accomodation__data-container .accomodation__rating-host .accomodation__host .accomodation__host-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__data-container .accomodation__rating-host .accomodation__host .accomodation__host-pic {
+    width: 64px;
+    height: 64px;
+  }
+}
+.accomodation .accomodation__collapses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 1023px) {
+  .accomodation .accomodation__collapses {
+    flex-direction: row;
+    gap: 76px;
   }
 }
 
@@ -423,6 +610,4 @@ footer {
   .error .error__link {
     font-size: 1.125rem;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
