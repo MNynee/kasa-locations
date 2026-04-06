@@ -314,6 +314,11 @@ footer {
   max-height: 500px;
   padding: 20px;
 }
+@media screen and (min-width: 1023px) {
+  .collapse .collapse__text.open {
+    min-height: 160px;
+  }
+}
 .collapse .collapse__text.close {
   max-height: 0;
   padding: 0 20px;
@@ -332,30 +337,36 @@ footer {
   height: 255px;
   position: relative;
   margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 @media screen and (min-width: 767px) {
   .carousel {
     min-height: 415px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .carousel {
+    border-radius: 25px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .carousel {
+    height: 500px;
+    border-radius: 30px;
+  }
+}
 .carousel .carousel__container {
   min-width: 100%;
   height: 100%;
   display: flex;
-  gap: 20px;
-  overflow: hidden;
-}
-@media screen and (min-width: 767px) {
-  .carousel .carousel__container {
-    height: 415px;
-  }
+  transition: all 0.3s ease;
 }
 .carousel .carousel__container .carousel__img {
   min-width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
 }
 .carousel .carousel__arrow {
   width: 12px;
@@ -468,7 +479,8 @@ footer {
   margin-top: 20px;
 }
 .accomodation .accomodation__data-container .accomodation__details .accomodation__tags .accomodation__tag {
-  width: 84px;
+  min-width: 84px;
+  padding: 0 5px;
   height: 18px;
   background-color: #FF6060;
   border-radius: 5px;
@@ -481,7 +493,7 @@ footer {
 }
 @media screen and (min-width: 1023px) {
   .accomodation .accomodation__data-container .accomodation__details .accomodation__tags .accomodation__tag {
-    width: 115px;
+    min-width: 115px;
     height: 25px;
     font-size: 0.875rem;
   }

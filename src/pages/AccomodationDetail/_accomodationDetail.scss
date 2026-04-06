@@ -53,7 +53,8 @@
                 margin-top: 20px;
     
                 .accomodation__tag {
-                    width: 84px;
+                    min-width: 84px;
+                    padding: 0 5px;
                     height: 18px;
                     background-color: variables.$main-color;
                     border-radius: 5px;
@@ -65,7 +66,7 @@
                     color: variables.$footer-text-color;
     
                     @media screen and (min-width: 1023px) {
-                        width: 115px;
+                        min-width: 115px;
                         height: 25px;
                         font-size: .875rem;
                     }

@@ -7,17 +7,17 @@ const Carousel = ({ accomodation }) => {
 
   useEffect(() => {
     if (carouselRef.current && accomodation?.pictures) {
-      const offset = (currentIndex % accomodation.pictures.length) * 106;
+      const offset = currentIndex * 100;
       carouselRef.current.style.transform = `translateX(-${offset}%)`;
     }
   }, [currentIndex, accomodation]);
 
   function handlePrevious() {
-    currentIndex === 0 ? setCurrentIndex(accomodation.pictures.length - 1) : setCurrentIndex(prev => prev - 1);
+    currentIndex === 0 ? setCurrentIndex(accomodation.pictures.length - 1) : setCurrentIndex(i => i - 1);
   }
   
   function handleNext() {
-    setCurrentIndex(prev => prev + 1);
+    currentIndex === accomodation.pictures.length - 1 ? setCurrentIndex(0) : setCurrentIndex(i => i + 1);
   }
 
   if (!accomodation?.pictures || accomodation.pictures.length === 0) {

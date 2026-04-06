@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Carousel from '../../components/Carousel'
+import Error from '../Error'
 import '../../main.css'
 
 const AccomodationDetail = () => {
@@ -25,7 +26,7 @@ const AccomodationDetail = () => {
   const accomodation = getAccomodationById(id)
 
   if (!accomodation) {
-    return <div>Loading...</div>
+    return <Error />
   }
 
   const ratingValue = Number(accomodation.rating) || 0
@@ -48,8 +49,8 @@ const AccomodationDetail = () => {
           </div>
           <div className="accomodation__rating-host">
             <div className="accomodation__rating">
-              {stars.map((star) => (
-                star <= ratingValue ? (<img src='../../src/assets/full-star.svg' alt='filled star' className='accomodation__star active'/>) : (<img src='../../src/assets/empty-star.svg' alt='empty star' className='accomodation__star inactive'/>)
+              {stars.map((star, index) => (
+                star <= ratingValue ? (<img key={`star-${index}`} src='../../src/assets/full-star.svg' alt='filled star' className='accomodation__star active'/>) : (<img key={`star-${index}`} src='../../src/assets/empty-star.svg' alt='empty star' className='accomodation__star inactive'/>)
               ))}
             </div>
             <div className="accomodation__host">
