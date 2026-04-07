@@ -18,6 +18,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/accomodations/:id' element={<AccomodationDetail />} />
+          <Route path='/404' element={<Error />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>

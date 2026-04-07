@@ -1,42 +1,26 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Carousel from '../../components/Carousel'
 import '../../main.css'
 
 const AccomodationDetail = () => {
-  const [accomodations, setAccomodations] = useState([])
+  const [accomodation, setAccomodation] = useState({})
   const { id } = useParams()
 
   useEffect(() => {
-    async function fetchAccomodations() {
+    async function fetchAccomodation() {
       const response = await fetch('/data/logements.json')
       const data = await response.json()
-      setAccomodations(data)
+      const foundAccomodation = data.find(accomodation => accomodation.id === id)
+      setAccomodation(foundAccomodation)
     }
-    fetchAccomodations()
-  }, [])
-
-  const getAccomodationById = (id) => {
-    return accomodations.find(accomodation => accomodation.id === id)
-  }
-
-  const accomodation = getAccomodationById(id)
-  const navigate = useNavigate()
+    fetchAccomodation()
+  }, [id])
 
   if (!accomodation) {
-    return (
-      <div className="page">
-        <button onClick={() => navigate(-1)} className="back-button">
-        ← Retourner
-        </button>
-        <section className="accomodation-not-found error">
-          <h1 className='accomodation error__title'>Logement non trouvé.</h1>
-          <p className='error__message'>Le logement demandé n'existe pas.</p>
-        </section>
-      </div>
-    )
+    return <Navigate to="/404" />
   }
 
   const ratingValue = Number(accomodation.rating) || 0
@@ -64,18 +48,20 @@ const AccomodationDetail = () => {
               ))}
             </div>
             <div className="accomodation__host">
-              <p className="accomodation__host-name">{accomodation.host?.name}</p>
+              <p className="accomodation__host-name">{accomodation.host?.name || 'Host'}</p>
               <img src={accomodation.host?.picture} alt={`${accomodation.host?.name || 'Host'} picture`} className="accomodation__host-pic" />
             </div>
           </div>
         </div>
         <div className="accomodation__collapses">
           <Collapse title="Description" description={accomodation.description} />
-          <Collapse title="Équipements" description={accomodation.equipments.map((item, index) => (
-            <span key={index}>
-              {index === accomodation.equipments.length - 1 ? item : <>{item}<br /></>}
-            </span>
-          ))} />
+          {accomodation.equipments && (
+            <Collapse title="Équipements" description={accomodation.equipments.map((item, index) => (
+              <span key={index}>
+                {index === accomodation.equipments.length - 1 ? item : <>{item}<br /></>}
+              </span>
+            ))} />
+          )}
         </div>
       </section>
     </div>
