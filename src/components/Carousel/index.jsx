@@ -13,11 +13,11 @@ const Carousel = ({ accomodation }) => {
   }, [currentIndex, accomodation]);
 
   function handlePrevious() {
-    currentIndex === 0 ? setCurrentIndex(accomodation.pictures.length - 1) : setCurrentIndex(i => i - 1);
+    setCurrentIndex(currentIndex === 0 ? accomodation.pictures.length - 1 : i => i - 1);
   }
   
   function handleNext() {
-    currentIndex === accomodation.pictures.length - 1 ? setCurrentIndex(0) : setCurrentIndex(i => i + 1);
+    setCurrentIndex(currentIndex === accomodation.pictures.length - 1 ? 0 : i => i + 1);
   }
 
   if (!accomodation?.pictures || accomodation.pictures.length === 0) {
