@@ -30,8 +30,8 @@
 }
 
 @-webkit-keyframes slideDown {
-    from { transform: translateY(-60px) }
-    to { transform: translateY(60px); }
+    from { transform: translateY(-120px) }
+    to { transform: translateY(0px); }
 }
 
 @keyframes slideUp {
