@@ -368,6 +368,21 @@ footer {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.carousel .carousel__index {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  right: 50%;
+  transform: translateX(-50%);
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 1023px) {
+  .carousel .carousel__index {
+    display: block;
+  }
+}
 .carousel .carousel__arrow {
   width: 12px;
   position: absolute;
