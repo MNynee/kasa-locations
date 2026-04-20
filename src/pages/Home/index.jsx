@@ -1,15 +1,13 @@
-import React from 'react'
 import { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
 import AccomodationCard from '../../components/Card'
-import '../../main.css'
 
 const Home = () => {
   const [recentAccomodations, setRecentAccomodations] = useState([])
 
     useEffect(() => {
         async function fetchAccomodations() {
-            const response = await fetch('./data/logements.json')
+            const response = await fetch('/data/logements.json')
             const data = await response.json()
             setRecentAccomodations(data.slice(0, 6))
         }
