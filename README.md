@@ -5,10 +5,9 @@ Kasa is a website for renting apartments between individuals in France where you
 The goal of this project was to start the conversion of a site (coded 10 years ago in ASP.NET) to JavaScript, more specifically to React, on the front end.
 
 ## Execute Vite + React + SASS
-
-Be sure you have [Node.js](https://nodejs.org/en/) installed. Vite will need it.
-After making sure you have it, all you have to do is open the console and use the command `npm run dev`.
-If the browser shows an error concerning hte SASS, you'll also need to use the command `npm install -D sass-embedded`.
+- Be sure you have [Node.js](https://nodejs.org/en/) installed. Vite will need it.
+- After making sure you have it, all you have to do is open the console and use the command `npm run dev`.
+- If the browser shows an error concerning SASS, you'll also need to use the command `npm install -D sass-embedded`.
 
 ## Prototype
 
