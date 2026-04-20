@@ -1,16 +1,15 @@
-# React + Vite
+# Project Kasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Kasa is a website for renting apartments between individuals in France where you can search for and see some details (general description, available amenities, owner's name) about these apartments.
 
-Currently, two official plugins are available:
+The goal of this project was to start the conversion of a site (coded 10 years ago in ASP.NET) to JavaScript, more specifically to React, on the front end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Execute Vite + React + SASS
 
-## React Compiler
+Be sure you have [Node.js](https://nodejs.org/en/) installed. Vite will need it.
+After making sure you have it, all you have to do is open the console and use the command `npm run dev`.
+If the browser shows an error concerning hte SASS, you'll also need to use the command `npm install -D sass-embedded`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Prototype
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A reference prototype is available [here](https://www.figma.com/proto/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?type=design&node-id=3-0&t=x8RBKuR4UiE3hhBW-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A0&show-proto-sidebar=1).

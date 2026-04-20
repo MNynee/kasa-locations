@@ -1,12 +1,10 @@
-import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Carousel from '../../components/Carousel'
-import '../../main.css'
 
 const AccomodationDetail = () => {
-  const [accomodation, setAccomodation] = useState({})
+  const [accomodation, setAccomodation] = useState({null:true})
   const { id } = useParams()
 
   useEffect(() => {

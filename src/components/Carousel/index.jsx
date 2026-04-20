@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
-import '../../main.css';
+import { useRef, useState, useEffect } from "react";
 
 const Carousel = ({ accomodation }) => {
   const carouselRef = useRef(null);

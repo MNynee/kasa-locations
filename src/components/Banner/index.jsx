@@ -1,6 +1,3 @@
-import React from 'react'
-import '../../main.css'
-
 const Banner = ({ isHome }) => {
   return (
         <section className={`banner ${isHome ? 'homepage' : 'about'}`}>

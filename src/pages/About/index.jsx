@@ -1,7 +1,5 @@
-import React from 'react'
 import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
-import '../../main.css'
 
 const About = () => {
 
