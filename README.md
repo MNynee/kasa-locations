@@ -6,6 +6,8 @@ The goal of this project was to start the conversion of a site (coded 10 years a
 
 ## Execute Vite + React + SASS
 - Be sure you have [Node.js](https://nodejs.org/en/) installed. Vite will need it.
+- To install Vite and React, you use the command `npm create vite@latest`.
+- To install ReactRouter, use `npm install react-router-dom`.
 - After making sure you have it, all you have to do is open the console and use the command `npm run dev`.
 - If the browser shows an error concerning SASS, you'll also need to use the command `npm install -D sass-embedded`.
 
