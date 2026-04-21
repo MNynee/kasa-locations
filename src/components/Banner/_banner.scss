@@ -11,7 +11,7 @@
     box-shadow: variables.$shadow-banner-homepage;
 
     &.homepage {
-        background: url('../../src/assets/banner-homepage.png');
+        background: url('/assets/banner-homepage.png');
         background-color: rgba(0, 0, 0, 0.6);
         background-blend-mode: darken;
         background-position: center;
@@ -20,7 +20,7 @@
     }
 
     &.about {
-        background: url('../../src/assets/banner-about.png');
+        background: url('/assets/banner-about.png');
         background-color: rgba(0, 0, 0, 0.3);
         background-blend-mode: darken;
         background-position: center;
