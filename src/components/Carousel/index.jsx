@@ -1,4 +1,6 @@
 import { useRef, useState, useEffect } from "react";
+import arrowLeft from '../../assets/arrow-left.svg'
+import arrowRight from '../../assets/arrow-right.svg'
 
 const Carousel = ({ accomodation }) => {
   const carouselRef = useRef(null);
@@ -31,8 +33,8 @@ const Carousel = ({ accomodation }) => {
         ))}
       </div>
       <span className="carousel__index">{currentIndex + 1}/{accomodation.pictures.length}</span>
-      <img src="../../src/assets/arrow-left.svg" alt="Previous photo" className="carousel__arrow left" onClick={() => handlePrevious()} />
-      <img src="../../src/assets/arrow-right.svg" alt="Next photo" className="carousel__arrow right" onClick={() => handleNext()} />
+      <img src={arrowLeft} alt="Previous photo" className="carousel__arrow left" onClick={() => handlePrevious()} />
+      <img src={arrowRight} alt="Next photo" className="carousel__arrow right" onClick={() => handleNext()} />
     </section>
   );
 };

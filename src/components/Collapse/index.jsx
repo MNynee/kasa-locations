@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import arrow from '../../assets/arrow.svg'
 
 const Collapse = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,7 @@ const Collapse = ({ title, description }) => {
       <div className="collapse__title">
         <h2>{title}</h2>
         <img
-          src="../../src/assets/arrow.svg"
+          src={arrow}
           alt="Arrow"
           className={`collapse__btn ${isOpen ? "open" : "close"}`}
           onClick={() => setIsOpen(!isOpen)}

@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
 import Carousel from '../../components/Carousel'
+import fullStar from '../../assets/full-star.svg'
+import emptyStar from '../../assets/empty-star.svg'
 
 const AccomodationDetail = () => {
-  const [accomodation, setAccomodation] = useState({null:true})
+  const [accomodation, setAccomodation] = useState({})
   const { id } = useParams()
 
   useEffect(() => {
@@ -42,7 +44,7 @@ const AccomodationDetail = () => {
           <div className="accomodation__rating-host">
             <div className="accomodation__rating">
               {stars.map((star, index) => (
-                star <= ratingValue ? (<img key={`star-${index}`} src='../../src/assets/full-star.svg' alt='filled star' className='accomodation__star active'/>) : (<img key={`star-${index}`} src='../../src/assets/empty-star.svg' alt='empty star' className='accomodation__star inactive'/>)
+                star <= ratingValue ? (<img key={`star-${index}`} src={fullStar} alt='filled star' className='accomodation__star active'/>) : (<img key={`star-${index}`} src={emptyStar} alt='empty star' className='accomodation__star inactive'/>)
               ))}
             </div>
             <div className="accomodation__host">
